@@ -6,9 +6,8 @@ import { Server } from "socket.io";
 export const app = express();
 export const server = http.createServer(app);
 export const socket = new Server(server, {
-  allowRequest: (req, callback) => {
-    const noOriginHeader = req.headers.origin !== undefined;
-    callback(null, noOriginHeader);
+  cors: {
+    origin: "http://localhost:3000/",
   },
 });
 
