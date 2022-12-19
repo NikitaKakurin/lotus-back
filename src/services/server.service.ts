@@ -11,11 +11,7 @@ export const socket = new Server(server, {
   },
 });
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+app.use(cors());
 
 socket.on("connection", (socket) => {
   console.log("socket connected");
