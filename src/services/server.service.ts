@@ -7,13 +7,13 @@ export const app = express();
 export const server = http.createServer(app);
 export const socket = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000/",
   },
 });
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: "http://localhost:3000/",
   })
 );
 
