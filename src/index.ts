@@ -3,7 +3,7 @@ import * as serverService from "./services/server.service";
 
 (async () => {
   try {
-    serverService.server.listen(process.env.PORT || PORT, function () {
+    serverService.server.listen(PORT, function () {
       console.log("Сервер ожидает подключения...");
     });
   } catch (error) {
