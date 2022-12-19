@@ -11,7 +11,11 @@ export const socket = new Server(server, {
   },
 });
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 socket.on("connection", (socket) => {
   console.log("socket connected");
