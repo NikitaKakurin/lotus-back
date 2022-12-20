@@ -8,9 +8,7 @@ export const server = http.createServer(app);
 
 export const socket = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
-    allowedHeaders: ["Access-Control-Allow-Origin"],
-    credentials: true,
+    origin: "*",
   },
 });
 app.use(
