@@ -8,20 +8,14 @@ export const server = http.createServer(app);
 
 export const socket = new Server(server, {
   cors: {
-    origin: [
-      "*",
-      "http://127.0.0.1:3000",
-      "https://nikitakakurin-task-schelduler.netlify.app",
-    ],
+    origin: "http://localhost:3000",
+    allowedHeaders: ["Access-Control-Allow-Origin"],
+    credentials: true,
   },
 });
 app.use(
   cors({
-    origin: [
-      "*",
-      "http://127.0.0.1:3000",
-      "https://nikitakakurin-task-schelduler.netlify.app",
-    ],
+    origin: ["*", "http://localhost:3000"],
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
   })
 );
