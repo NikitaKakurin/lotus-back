@@ -36,6 +36,6 @@ socket.on("disconnection", (socket) => {
 setInterval(() => {
   console.log("socket currentTime");
   socket.emit("currentTime", {
-    currentTime: Date.now(),
+    currentTime: `${Date.now()}`,
   });
 }, 1000);
