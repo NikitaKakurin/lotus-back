@@ -29,8 +29,12 @@ app.use(
 socket.on("connection", (socket) => {
   console.log("socket connected");
 });
+socket.on("disconnection", (socket) => {
+  console.log("socket disconnection");
+});
 
 setInterval(() => {
+  console.log("socket currentTime");
   socket.emit("currentTime", {
     currentTime: Date.now(),
   });
