@@ -8,12 +8,13 @@ export const server = http.createServer(app);
 
 export const socket = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
   },
 });
 app.use(
   cors({
-    origin: ["*", "http://localhost:3000"],
+    origin: "http://localhost:3000",
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
   })
 );
