@@ -14,7 +14,7 @@ export const socket = new Server(server, {
 
 app.use(
   cors({
-    origin: "http://localhost:3000/",
+    origin: "http://localhost:3000",
   })
 );
 
