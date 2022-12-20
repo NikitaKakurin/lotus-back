@@ -5,10 +5,13 @@ import { Server } from "socket.io";
 
 export const app = express();
 export const server = http.createServer(app);
+
 export const socket = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://localhost:3000",
     methods: ["GET", "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials: true,
   },
 });
 
