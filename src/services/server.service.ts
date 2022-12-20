@@ -10,7 +10,7 @@ export const socket = new Server(server, {
   cors: {
     origin: [
       "*",
-      "http://localhost:3000",
+      "http://127.0.0.1:3000",
       "https://nikitakakurin-task-schelduler.netlify.app",
     ],
   },
@@ -19,7 +19,7 @@ app.use(
   cors({
     origin: [
       "*",
-      "http://localhost:3000",
+      "http://127.0.0.1:3000",
       "https://nikitakakurin-task-schelduler.netlify.app",
     ],
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
